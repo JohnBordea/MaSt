@@ -1,9 +1,7 @@
-// vendor.scss v1.0 | @ajlkn | MIT licensed */
 
 // Vars.
 
 	/// Vendor prefixes.
-	/// @var {list}
 	$vendor-prefixes: (
 		'-moz-',
 		'-webkit-',
@@ -12,8 +10,6 @@
 	);
 
 	/// Properties that should be vendorized.
-	/// Data via caniuse.com, github.com/postcss/autoprefixer, and developer.mozilla.org
-	/// @var {list}
 	$vendor-properties: (
 
 		// Animation.
@@ -193,8 +189,6 @@
 	);
 
 	/// Values that should be vendorized.
-	/// Data via caniuse.com, github.com/postcss/autoprefixer, and developer.mozilla.org
-	/// @var {list}
 	$vendor-values: (
 
 		// Cross fade.
@@ -250,10 +244,6 @@
 // Functions.
 
 	/// Removes a specific item from a list.
-	/// @author Hugo Giraudel
-	/// @param {list} $list List.
-	/// @param {integer} $index Index.
-	/// @return {list} Updated list.
 	@function remove-nth($list, $index) {
 
 		$result: null;

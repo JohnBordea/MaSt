@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyStamp</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		        <link rel="icon" href="images/2022-04-16 17_39_42-Canva.jpg" type="image/gif">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/products.css" />
+		<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); 
+  -webkit-transform: rotate(90deg); 
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+			<div id="header-wrapper">
+                <header id="header" class="container">
+
+                    <!-- Logo -->
+					<div id="logo">
+						<h1><a href="index.html">MyStamp</a></h1>
+					</div>
+
+                    <!-- Nav -->
+					<nav id="nav">
+                                <ul>
+                                    <li><a href="index.html">Main</a></li>
+
+                                    <li><a href="products.html">Products</a></li>
+                                   <!-- <li><a href="right-sidebar.html">Right Sidebar</a></li> -->
+                                    <li><a href="about_us.html">About us</a></li>
+
+                                    <!-- Account -->
+                                    <li>
+                                        <a href="#">Account</a>
+                                        <ul>
+                                            <li><a href="login.html">Sign in</a></li>
+                                            <li><a href="profile.html">Account info</a></li>
+
+                                            <!-- Unused stuff, just to be in case it will be needed in future XD -->
+
+                                            <!--<li> 
+                                                <a href="#">Phasellus consequat</a>
+                                                <ul>
+                                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                                    <li><a href="#">Phasellus consequat</a></li>
+                                                    <li><a href="#">Magna phasellus</a></li>
+                                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                                </ul>
+                                            </li>
+                                        <li><a href="#">Veroeros feugiat</a></li>-->
+
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                    </header>
+                </div>
+
+
+<!--Banner-->
+<div id="banner-wrapper">
+				<div id="banner" class="box container">
+					<div class="row">
+						<div class="col-12 col-12-medium">
+							<h2>Scholarly HTML</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-wrapper">
+				<div class="container">
+					<h2>Contents</h2>
+					<ol>
+						<li><a href="#task">Task</a></li>
+						<li><a href="#abstract">Abstract</a></li>
+						<li><a href="#structure">Structure</a></li>
+						<ol>
+							<li><a href="#scheme">Website Schemate</a></li>
+							<li><a href="#hf">Header/Footer</a></li>
+							<li><a href="#elements">Elements</a></li>
+						</ol>
+						<li><a href="#team">Team Members</a></li>
+						<li><a href="#bib">Bibliography</a></li>
+					</ol>
+				</div>
+				<div class="container">
+					<h2 id="task">Task</h2>
+					
+					Sa doreste implementarea unei aplicatii Web destinata colectionarilor de artefacte filatelice. Pe baza facilitatilor de cautare multi-criteriala implementate, utilizatorii autentificati vor putea crea, inventaria si partaja albume de timbre in functie de diverse caracteristici (imagine, valoare, tara, perioada de emisie, istoric, existenta stampilei, grad de deteriorare etc.), plus vor putea importa/exporta datele referitoare la marcile postale detinute. Se vor genera statistici diverse, textuale si grafice, ce pot fi exportate in formate deschise – minimal, CSV si SVG, respectiv. Se va realiza, de asemenea, un clasament al celor mai populare emisii filatelice, plus al celor mai activi colectionari, disponibil si ca flux de date RSS. Inspiratie: <a href="https://www.stampworld.com/en"><b><i>Stamp World.</i></b></a>
+                    
+				</div>
+				<div class="container">
+					<p></p>
+					<h2 id="abstract">Abstract</h2>
+					
+					<p><b>MyStamp</b> is a web-platform app focused on various catalogues, connecting thousands of amateur and dedicated stamp collectors. </p>
+                    
+				</div>
+				
+				<div class="container">
+					<p></p>
+					<h2 id="structure">Structure</h2>
+					<ul>
+						<li>
+							<h3 id="scheme">Website scheme</h3>
+							<p>
+								*All pages will include a:<br>Header containing nav bar<br>Footer containing contancts and some info
+							</p>
+
+							<p>
+								Pages are the following:
+							</p>
+
+							<ul id="myUL">
+
+                              <li><span class="caret">Main</span>
+                                <ul class="nested">
+                                  <li>Welcome Banner</li>
+                                  <li>Recently added stamps section</li>
+                                </ul>
+                              </li>
+                              <li><span class="caret">Products</span>
+                                <ul class="nested">
+                                  <li>Banner</li>
+                                  <li><span class="caret">Filter bar</span>
+                                  	<ul class="nested">
+                                  		<li>*every part is a dropdown list, triggered on click*</li>
+                                  		<li>Country</li>
+                                  		<li>Theme</li>
+                                  		<li>Color</li>
+                                  		<li>Year</li>
+                                  	</ul>
+                                  </li>
+                                  <li><span class="caret">Product grid</span>
+                                  	<ul class="nested">
+                                  		<li>*just for template will be displayed 3 objects*</li>
+                                  		<li>*the content of a product/stamp page will be siplayed accordingly to the it's ID*</li>
+                                  		<li>Product 1</li>
+                                  		<li>Product 3</li>
+                                  		<li>Product 3</li>
+                                  	</ul>
+                                  </li>
+
+                                </ul>
+                              </li>
+
+                              <li><span class="caret">Product page</span>
+                                  	<ul class="nested">
+                                  		<li>*the content of a product/stamp page will be siplayed accordingly to the it's ID*</li>
+                                        <li><span class="caret">Left side</span>
+                                        <ul class="nested">
+                                          <li>Image</li>
+                                        </ul>
+                                        </li>
+                                        <li><span class="caret">Right side</span>
+                                        <ul class="nested">
+                                          <li>Name</li>
+                                          <li>Description</li>
+                                          <li>Price</li>
+                                          <li>Button: On-click submits to purchase</li>
+                                          <li>Seller</li>
+                                        </ul>
+                                        </li>
+                                  	</ul>
+                                  </li>
+
+                              <li><span class="caret">About us</span>
+                                <ul class="nested">
+                                  <li><span class="caret">Left side</span>
+                                  	<ul class="nested">
+                                  		<li>Our purpuse or smth like that</li>
+                                  		<li>Link to scholarly</li>
+                                  	</ul>
+                                  </li>
+                                  <li><span class="caret">The right side (about us part)</span>
+                                  	<ul class="nested">
+                                  		<li>Who are we & What we do?</li>
+                                  		<li>Our team - team members</li>
+                                  	</ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><span class="caret">Account stuff</span>
+                                <ul class="nested">
+                                  <li><span class="caret">Sign In/Up</span>
+                                  	<ul class="nested">
+                                  		<li><span class="caret">Sign In</span>
+                                  			<ul class="nested">
+                                  				<li>Username field</li>
+                                  				<li>Password field</li>
+                                  				<li>Button to submit the info (on click)</li>
+                                          <li>Sign Up Button -> will switch to sign up part (on click)</li>
+                                  			</ul>
+                                  		</li>
+                                  		<li><span class="caret">Sign up</span>
+                                  			<ul class="nested">
+                                  				<li>Email field</li>
+                                  				<li>Username field</li>
+                                  				<li>Password field</li>
+                                  				<li>Button to submit the info (on click)</li>
+                                          <li>Sign In Button -> will switch to sign in part (on click)</li>
+
+                                  			</ul>
+                                  		</li>
+                                      <li>Back Button -> will return the user back on main page</li>
+
+                                  	</ul>
+                                  </li>
+
+                                  <li><span class="caret">Profile page</span>
+                                  	<ul class="nested">
+                                  		<li><span class="caret">Account shape containing the info:</span>
+                                  			<ol class="nested">
+                                  				<li>Profile photo</li>
+                                  				<li>Username</li>
+                                  				<li>Email</li>
+                                  				<li>Currency or number of posts</li>
+                                  				<li>??? Recent orders/posts ???</li>
+                                  				<li>??? Wishlist/Recently liked ???</li>
+                                  			</ol>
+                                  		</li>
+                                  	</ul>
+                                  </li>
+
+                                </ul>
+
+						</li>
+						<li>
+							<h3 id="hf">Header/Footer</h3>
+							<ul id="myUL">
+
+                              <li><span class="caret">Header</span>
+                                <ul class="nested">
+                                	<li>*On click these redirect to the according page*</li>
+                                  <li>Logo (to the left) -> redirects to main on click</li>
+                                  <li><span class="caret">Navigation zone (oriented to the right)</span>
+                                  	<ul class="nested">
+                                  		<li>*On click these redirect to the according page*</li>
+                                  		<li>Main</li>
+                                  		<li>Products</li>
+                                  		<li>About us</li>
+                                  		<li>Account</li>
+                                  	</ul>
+                                  </li>
+                                </ul>
+
+                              </li>
+                              <li><span class="caret">Footer</span>
+                                <ul class="nested">
+                                  <li>Documentation section</li>
+                                  <li>Random Links</li>
+                                  <li>Random links</li>
+                                  <li><span class="caret">Contact us</span>
+                                  <ul class="nested">
+                                  <li>Social media Button links - Redirect on click </li>
+                                  <li>Adress</li>
+                                  <li>Phone number</li>
+                                  </ul>
+                                  </li>
+                              </ul>
+                             </li>
+
+                            </ul>
+						</li>
+						<li>
+							<h3 id="elements">Elements</h3>
+							<p>Here are some elements used</p>
+							<ul id="myUL">
+
+                              <li><span class="caret">LOGO</span>
+                                <ul class="nested">
+                                	<li>
+                                		<div id="logo">
+						                    <h1><a href="index.html">MyStamp</a></h1>
+					                    </div>
+                                	</li>
+                                </ul>
+                              </li>
+                              <li><span class="caret">Contact Buttons</span>
+                                <ul class="nested">
+                                	<li>
+                                		<section class="widget contact last">
+                                        <ul>
+                                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                            <li><a href="#" class="icon brands fa-tiktok"><span class="label">Tiktok</span></a></li>
+                                            <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+                                            <li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+                                            <li><a href="#" class="icon brands fa-viber"><span class="label">Viber</span></a></li>
+                                            <li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                            <li><a href="#" class="icon brands fa-amazon"><span class="label">Amazon</span></a></li>
+                                            <li><a href="#" class="icon brands fa-google"><span class="label">Google</span></a></li>
+                                            <li><a href="#" class="icon brands fa-yahoo"><span class="label">Yahoo!</span></a></li>
+                                            <li><a href="#" class="icon brands fa-ebay"><span class="label">Ebay</span></a></li>
+                                        </ul>
+                                    </section>
+                                	</li>
+                                </ul>
+                              </li>
+                              <li><span class="caret">Product box</span>
+                                <ul class="nested">
+                                	<li>
+                                		<div id="features-wrapper">
+				                        <div class="container">
+				                    	<div class="row">
+					                	<div class="col-4 col-12-medium">
+										<section class="box feature">
+										<a href="product_page.html?id=0" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<div class="inner">
+										<header>
+											<h2>Name</h2>
+											<p>Seller</p>
+										</header>
+										<p>Description</p>
+										</div>
+										</section>
+										</div></div></div></div>
+                                	</li>
+                                </ul>
+                            </li>
+                               <li><span class="caret">Filter</span>
+                                <ul class="nested">
+                                	<li>
+                                		
+<div id="features-wrapper">
+				<header id="header" class="container">
+					<nav id="nav">
+                    <form>
+						<ul>
+                       <li>
+						    <select name="Country" style=" font-weight: bold">
+								<option value="" disabled="" selected="">Country</option>
+								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+							</select>
+						</li>
+                        <li>
+							<select name="Theme" style=" font-weight: bold" >
+								<option value="" disabled="" selected="">Theme</option>
+								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+							</select>
+						</li>
+                        <li>
+							<select name="Color" style=" font-weight: bold">
+								<option value="" disabled="" selected="">Color</option>
+								<option value="Monochrome">Monochrome</option>
+								<option value="Multicolor">Multicolor</option>
+							</select>
+						</li>
+                        <li>
+							<select name="From Year" style=" font-weight: bold">
+								<option value="" disabled="" selected="">From Year</option>
+								<option value="1800">1800</option>
+								<option value="1900">1900</option>
+								<option value="2000">2000</option>
+							</select>
+						</li>
+						</ul>
+            </form>
+					</nav>
+				</header>
+			</div>
+
+    </li>                         
+    </ul>
+       </li>
+         <li><span class="caret">LOGO for window label</span>
+                                <ul class="nested">
+                                  <li>
+                                    <img src="images/2022-04-16 17_39_42-Canva.jpg" width="500" height="500">
+                                  </li>
+                                    </ul>
+                                  </li>
+     </ul>             
+				</div>
+
+          <div class="container">
+          <h2 id="task">Team Members</h2>
+          <h3>Bordea Ion</h3>
+          <h3>Hatmanu Lavinia</h3>
+          <h3>Pavlovschi Catalin</h3>
+          </div>
+
+
+
+                  <div class="container">
+                    <p></p>
+                  <h2 id="bib">Bibliography</h2>
+                  <p>
+                    <a href="https://www.w3schools.com">W3schools</a><br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web">mdm web docs_</a><br>
+                    <a href="https://way2tutorial.com">Way2Tutorial</a><br>
+                    <a href="https://w3c.github.io/scholarly-html/">Scholarly HTML Template</a>
+                  </p>
+                  
+                  </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+                <div id="footer-wrapper">
+                    <footer id="footer" class="container">
+                        <div class="row">
+                            <div class="col-3 col-6-medium col-12-small">
+
+                                <!-- Links -->
+                                    <section class="widget links">
+                                        <h3>Documentation</h3>
+                                        <ul class="style2">
+                                            <li><a href="Scholarly.html">Scholarly</a></li>
+
+                                        </ul>
+                                    </section>
+
+                            </div>
+                            <div class="col-3 col-6-medium col-12-small">
+
+                                <!-- Links -->
+                                    <section class="widget links">
+                                        <h3>Random Links</h3>
+                                        <ul class="style2">
+                                            <li><a href="#">Etiam feugiat condimentum</a></li>
+                                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                                            <li><a href="#">Felis varius pellentesque potenti</a></li>
+                                        </ul>
+                                    </section>
+
+                            </div>
+                            <div class="col-3 col-6-medium col-12-small">
+
+                                <!-- Links -->
+                                    <section class="widget links">
+                                        <h3>Random Links</h3>
+                                        <ul class="style2">
+                                            <li><a href="#">Etiam feugiat condimentum</a></li>
+                                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                                            <li><a href="#">Felis varius pellentesque potenti</a></li>
+                                        </ul>
+                                    </section>
+
+                            </div>
+                            <div class="col-3 col-6-medium col-12-small">
+
+                                <!-- Contact -->
+                                    <section class="widget contact last">
+                                        <h3>Contact Us</h3>
+                                        <ul>
+                                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                            <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                                            <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+                                        </ul>
+                                        <p>1234 Fictional Str.<br />
+                                        Fictional City, RO 00000<br />
+                                        (505) 503-4455</p>
+                                    </section>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="copyright">
+                                    <ul class="menu">
+                                        <li>&copy; MyStamp. All rights reserved</li><li>Design: <a href="about_us.html"> TeamName</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+
+        <!-- Scripts-->
+        <script src="assets/js/scholarly.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+</body>
+</html>
