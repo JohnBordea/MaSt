@@ -169,6 +169,10 @@ ul, #myUL {
             <li><a href="#task">Task</a></li>
             <li><a href="#ProdPer">Product's perspective</a></li>
             <li><a href="#ProdFunc">Product's Functionalities</a></li>
+            <li><a href="#HardInt">Hardware Interface</a></li>
+            <li><a href="#SoftInt">Software Interface</a></li>
+            <li><a href="#UsMan">User Manual</a></li>
+            <li><a href="#ExtDep">External dependencies</a></li>
             <li><a href="#structure">Structure</a></li>
             <ul style="list-style-type:circle">
               <li><a href="#scheme">Website Scheme</a></li>
@@ -176,8 +180,13 @@ ul, #myUL {
               <li><a href="#elements">Elements</a></li>
             </ul>
 
-            <li><a href="#team">Team Members</a></li>
-            <li><a href="#bib">Bibliography</a></li>
+            </ol>
+
+            <li><a href="#GenDesc">External Interface Requirements</a></li>
+            
+            <ol>
+              
+            <li><a href="#"></a></li>
 
             </ol>
 
@@ -248,7 +257,7 @@ ul, #myUL {
                     
         </div>
 
-          <div class="container">
+        <div class="container">
           <h2 id="ProdFunc">Product's Functionalities</h2>
           
           <ul style="list-style-type:disc">
@@ -259,6 +268,53 @@ ul, #myUL {
           </ul>
                     
         </div>
+
+        <div class="container">
+          <h2 id="HardInt">Hardware Interface</h2>
+          
+
+            <p>Front-end part of the app is compatible with the most of the modern devices (spartphones & tablets (Android & iOS), computers & laptops (Windows, Linux, MacOS etc.)). Because of these basic specs, which are using HTML & CSS & JS & SASS, the page grants simplicity and minimal technical requirements. The back-end part (The DataBase and the server) will run on a common host or a server with reduced capacity , as the specs are of low complexity. The comunication between components is made by PHP functions. Taking in count the previously said things, the maintenance and the app itself can be included in a lowcost category. </p>
+            <!--<br>
+            <p>Here is an example of connectivity with the database:</p>
+            
+            <pre>
+                $dbhost = "localhost";
+                $dbuser = "root";
+                $dbpass = "";
+                $dbname = "tw";
+
+                if (!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname))
+                {
+                  die(" failed to connect! ");
+                }
+            </pre> -->
+
+
+        </div>
+
+        <div class="container">
+          <h2 id="SoftInt">Software Interface</h2>
+          
+          
+            <p>This app interacts with some extern software elements, as user's browser, and search engine. As well, the web app interacts with standard PHP libraries. All these services require a web host, available either in a virtual form, or a physical one, and a domain provider. The comunication between Back-End (server) and Front-End (Web Site/ App) is made through the PHP, including the action: maintaining a log session; storing temporary data to verify the data for authentication; storing the email data for checking if there is no other account using the same email; filtering throughout posts; deleting a post; LOGIN/SIGN-UP and LOGING OUT options; Displaing Account info in the ACCOUNT PAGE; Post's rating data etc.</p>
+
+        </div>
+
+        <div class="container">
+          <h2 id="UsMan">User Manual</h2>
+          
+          
+            <p>!!! This document can serve and can be used as a User Manual Document. !!!</p>
+
+        </div>
+       <div class="container">
+          <h2 id="ExtDep">External Dependencies</h2>
+          
+          
+            <p>This website/web-app does not use any external dependencies.</p>
+
+        </div>
+
 
 
 
