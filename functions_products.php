@@ -12,7 +12,8 @@ $q3 = mysqli_query($con, "select color from products");
 $q4 = mysqli_query($con, "select year from products");
 
 function box($continent, $theme) {
-        echo    '<section class="box feature">
+        echo    '<div class="col-4 col-12-medium">
+        <section class="box feature">
         <a href="product_page.php?id=0" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
                                 <div class="inner">
                                     <header>
@@ -20,5 +21,6 @@ function box($continent, $theme) {
                                     </header>
                                     <p> '.$theme.'</p>
                             </div>
-                            </section';
+                            </section>
+                            </div>';
 }

@@ -191,7 +191,6 @@ $_SESSION;
 			<div id="features-wrapper">
 				<div class="container">
 					<div class="row">
-						<div class="col-4 col-12-medium">
                         <?php
             while(($continent = mysqli_fetch_array($q1)) &&
                    ($theme = mysqli_fetch_array($q2)) &&
@@ -200,7 +199,6 @@ $_SESSION;
                     box($continent[0], $theme[0]);
             }
             ?>
-                        </div>
                     </div>
                  </div>
             </div>
@@ -210,7 +208,6 @@ $_SESSION;
     			<div id="features-wrapper">
 				<div class="container">
 					<div class="row">
-						<div class="col-4 col-12-medium">
                         <?php
             $q1f = mysqli_query($con, "select continent ".$filters);
             $q2f = mysqli_query($con, "select theme ".$filters);
@@ -234,7 +231,6 @@ $_SESSION;
                 }
             }
             ?>
-                        </div>
                     </div>
                  </div>
             </div>
