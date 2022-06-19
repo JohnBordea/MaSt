@@ -186,7 +186,10 @@ ul, #myUL {
             
             <ol>
               
-            <li><a href="#"></a></li>
+            <li><a href="#UserInt">User Interface</a></li>
+            <li><a href="#HardInt">Harware Interface</a></li>
+            <li><a href="#SoftInt">Software Interface</a></li>
+            <li><a href="#ConnInt">Connection Interface</a></li>
 
             </ol>
 
@@ -315,9 +318,39 @@ ul, #myUL {
 
         </div>
 
+        <div class="container">
+          <h2 id="UserInt">User Interfaces</h2>
+          
+          
+            <p>This web application consists in 5 web pages. Their common element is the header and the footer,the header is the navigation bar that can fly you thru all pages and the footer which has some external links. </p>
 
+        </div>
 
+        <div class="container">
+          <h2 id="HardInt">Harware Interfaces</h2>
+          
+          
+            <p>The web application has been made to work on all modern platforms, from your phone or tablet to your computer. The servers for the back-end will work on a common host that has low capacity because of the minimum compexity of the function used.</p>
 
+        </div>
+
+        <div class="container">
+          <h2 id="SoftInt">Softaware Interfaces</h2>
+          
+          
+            <p>This website works with multiple external software elements. </p>
+
+        </div>
+
+        <div class="container">
+          <h2 id="ConnInt">Connection Interfaces</h2>
+          
+          
+            <p>The communication standard used is the HTTP. For the internal communication there are used direct requests and also there are used a user and a password for the data security </p>
+
+        </div>
+
+        
 				<div class="container">
 					<p></p>
 					<h2 id="structure">Structure</h2>
