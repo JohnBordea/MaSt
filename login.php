@@ -67,7 +67,7 @@ session_start();
 
 	
 
-	<div id="box">
+	<div class="container" id="box">
 		
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div><br>

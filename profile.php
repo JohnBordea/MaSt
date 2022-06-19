@@ -115,8 +115,8 @@ $_SESSION;
             </div>-->
            
         </div>
-        <div class="recent-border "> <span class="recent-orders">Recent orders</span> </div>
-        <div class="wishlist-border "> <span class="wishlist">Wishlist</span> </div>
+        <div class="recent-border "> <span class="recent-orders">Recent posts</span> </div>
+        <!-- <div class="wishlist-border "> <span class="wishlist">Wishlist</span> </div> -->
        
     </div>
 </div>
@@ -130,14 +130,14 @@ $_SESSION;
 
                                 <!-- Links -->
                                     <section class="widget links">
-                                        <h3>Random Info</h3>
-                                        <ul class="style2">
-                                            <li><a href="#">Etiam feugiat condimentum</a></li>
-                                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-                                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
-                                            <li><a href="#">Felis varius pellentesque potenti</a></li>
-                                            <li><a href="#">Nullam scelerisque blandit leo</a></li>
-                                        </ul>
+                                                                        <h3>Documentation</h3>
+                                <ul class="style2">
+                                    <li><a href="Scholarly.php">Scholarly</a></li>
+                                    <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                                    <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                                    <li><a href="#">Felis varius pellentesque potenti</a></li>
+                                    <li><a href="#">Nullam scelerisque blandit leo</a></li>
+                                </ul>
                                     </section>
 
                             </div>

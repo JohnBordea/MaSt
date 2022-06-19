@@ -123,7 +123,7 @@ $_SESSION;
 	
 									<!-- Box -->
 									<section class="box feature">
-										<a href="product_page.html?id=0" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="product_page.php?id=0" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Name</h2>
@@ -138,7 +138,7 @@ $_SESSION;
 	
 									<!-- Box -->
 									<section class="box feature">
-										<a href="product_page.html?id=1" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="product_page.php?id=1" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Name</h2>
@@ -153,7 +153,7 @@ $_SESSION;
 	
 									<!-- Box -->
 									<section class="box feature">
-										<a href="product_page.html?id=2" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="product_page.php?id=2" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Name</h2>
@@ -195,7 +195,7 @@ $_SESSION;
                                     <section class="widget links">
                                         <h3>Documentation</h3>
                                         <ul class="style2">
-                                            <li><a href="Scholarly.html">Scholarly</a></li>
+                                            <li><a href="Scholarly.php">Scholarly</a></li>
                                             <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
                                             <li><a href="#">Sed porttitor cras in erat nec</a></li>
                                             <li><a href="#">Felis varius pellentesque potenti</a></li>

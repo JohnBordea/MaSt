@@ -110,7 +110,7 @@ $_SESSION;
 											<h3>Our purpose</h3>
 											<p>Here you can find our vision, if you are interested in finding out more, click the button below!</p>
                                             <footer>
-												<a href="scholarly.html" class="button icon solid fa-info-circle">Find out more about our purpose</a>
+												<a href="scholarly.php" class="button icon solid fa-info-circle">Find out more about our purpose</a>
 											</footer>
 										</section>
 								</div>
@@ -204,7 +204,7 @@ $_SESSION;
                                     <section class="widget links">
                                         <h3>Documentation</h3>
                                         <ul class="style2">
-                                            <li><a href="Scholarly.html">Scholarly</a></li>
+                                            <li><a href="Scholarly.php">Scholarly</a></li>
                                             <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
                                             <li><a href="#">Sed porttitor cras in erat nec</a></li>
                                             <li><a href="#">Felis varius pellentesque potenti</a></li>
@@ -217,14 +217,14 @@ $_SESSION;
 
                                 <!-- Links -->
                                     <section class="widget links">
-                                        <h3>Random Links</h3>
-                                        <ul class="style2">
-                                            <li><a href="#">Etiam feugiat condimentum</a></li>
-                                            <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-                                            <li><a href="#">Sed porttitor cras in erat nec</a></li>
-                                            <li><a href="#">Felis varius pellentesque potenti</a></li>
-                                            <li><a href="#">Nullam scelerisque blandit leo</a></li>
-                                        </ul>
+                                <h3>Random Links</h3>
+                                <ul class="style2">
+                                    <li><a href="#">Etiam feugiat condimentum</a></li>
+                                    <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                                    <li><a href="#">Sed porttitor cras in erat nec</a></li>
+                                    <li><a href="#">Felis varius pellentesque potenti</a></li>
+                                    <li><a href="#">Nullam scelerisque blandit leo</a></li>
+                                </ul>
                                     </section>
 
                             </div>

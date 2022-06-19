@@ -18,6 +18,7 @@ $_SESSION;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/2022-04-16 17_39_42-Canva.jpg" type="image/gif">
 		<link rel="stylesheet" href="assets/css/product.page.css" />
 	</head>
 	<body class="is-preload right-sidebar">
@@ -144,11 +145,11 @@ $_SESSION;
 
 							<!-- Links -->
 							<section class="widget links">
-								<h3>Random Stuff</h3>
+								<h3>Documentation</h3>
 								<ul class="style2">
-									<li><a href="#">Etiam feugiat condimentum</a></li>
-									<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-									<li><a href="#">Sed porttitor cras in erat nec</a></li>
+									<li><a href="Scholarly.php">Scholarly</a></li>
+                                    <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+                                    <li><a href="#">Sed porttitor cras in erat nec</a></li>
 									<li><a href="#">Felis varius pellentesque potenti</a></li>
 									<li><a href="#">Nullam scelerisque blandit leo</a></li>
 								</ul>
