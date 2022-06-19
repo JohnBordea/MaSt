@@ -6,10 +6,10 @@ function ends_with($string, $end) {
     return substr_compare($string, $end, -strlen($end)) === 0;
 }
 
-$q1 = mysqli_query($con, "select Continent");
-$q2 = mysqli_query($con, "select Theme");
-$q3 = mysqli_query($con, "select Color");
-$q4 = mysqli_query($con, "select From Year");
+$q1 = mysqli_query($con, "select continent from products");
+$q2 = mysqli_query($con, "select theme from products");
+$q3 = mysqli_query($con, "select color from products");
+$q4 = mysqli_query($con, "select year from products");
 
 function box($continent, $theme) {
         echo    '<section class="box feature">
