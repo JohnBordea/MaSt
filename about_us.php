@@ -149,7 +149,6 @@ $_SESSION;
                                                                             <h2>Bordea Ion</h2>
                                                                             <h2>&nbsp;</h2>
                                                                         </header>
-                                                                        <p>Description</p>
                                                                     </div>
                                                                 </section>
                             
@@ -163,7 +162,6 @@ $_SESSION;
                                                                         <header>
                                                                             <h2>Hatmanu Lavinia</h2>
                                                                         </header>
-                                                                        <p>Description</p>
                                                                     </div>
                                                                 </section>
                             
@@ -177,7 +175,6 @@ $_SESSION;
                                                                         <header>
                                                                             <h2>Pavlovschi Catalin</h2>
                                                                         </header>
-                                                                        <p>Description</p>
                                                                     </div>
                                                                 </section>
                             
