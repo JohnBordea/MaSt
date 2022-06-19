@@ -4,7 +4,7 @@ session_start();
 
   include("connect.php");
   include("functions_login.php");
-  include("function_products.php");
+  include("functions_products.php");
 
   $user_data=check_login($con);
 
