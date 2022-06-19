@@ -209,10 +209,10 @@ $_SESSION;
 				<div class="container">
 					<div class="row">
                         <?php
-            $q1f = mysqli_query($con, "select continent ".$filters);
-            $q2f = mysqli_query($con, "select theme ".$filters);
-            $q3f = mysqli_query($con, "select color".$filters);
-            $q4f = mysqli_query($con, "select from year ".$filters);
+            $q1f = mysqli_query($con, "select continent from products".$filters);
+            $q2f = mysqli_query($con, "select theme from products".$filters);
+            $q3f = mysqli_query($con, "select color from products".$filters);
+            $q4f = mysqli_query($con, "select year from products ".$filters);
             $i=0;
             while(($continent = mysqli_fetch_array($q1f)) && 
                   ($theme = mysqli_fetch_array($q2f)) && 
