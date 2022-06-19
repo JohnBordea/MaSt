@@ -117,7 +117,7 @@ $_SESSION;
 						<ul>
                        <li>
 						    <select name="Continent" style=" font-weight: bold">
-								<option value="" disabled="" selected="">Country</option>
+								<option value="" disabled="" selected="">Continent</option>
 								<option value="America">America</option>
 								<option value="Europe">Europe</option>
 								<option value="Asia">Asia</option>
