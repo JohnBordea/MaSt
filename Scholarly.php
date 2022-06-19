@@ -319,6 +319,10 @@ ul, #myUL {
         </div>
 
         <div class="container">
+          <h2 id="#GenDesc">External Interface Requirements</h2>
+				</div>
+
+        <div class="container">
           <h2 id="UserInt">User Interfaces</h2>
           
           
@@ -350,7 +354,7 @@ ul, #myUL {
 
         </div>
 
-        
+
 				<div class="container">
 					<p></p>
 					<h2 id="structure">Structure</h2>
