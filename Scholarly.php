@@ -650,7 +650,7 @@ ul, #myUL {
 
                               <p><li><span class="caret"> <b> Hatmanu Lavinia </b> </span>
                                 <ul class="nested">
-                                  <li><p><p>Worked on: Page with products & page for each product page; Created the DataBase; Filter for sorting the products </p></p></li>
+                                  <li><p><p>Worked on: Page with products & about us page; Created the DataBase; Filter for sorting the products </p></p></li>
                                 </ul>
                               </li></p>
 

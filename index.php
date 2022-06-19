@@ -106,7 +106,7 @@ $_SESSION;
 				<div id="banner" class="box container">
 					<div class="row">
 						<div class="col-12 col-12-medium">
-							<h2>Hi. Here you can buy or sell Stamps!</h2>
+							<h2>Hi. Here you can admire collections of Stamps!</h2>
 						</div>
 					</div>
 				</div>

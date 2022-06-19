@@ -4,6 +4,7 @@ session_start();
 
   include("connect.php");
   include("functions_login.php");
+  include("function_products.php");
 
   $user_data=check_login($con);
 
@@ -108,26 +109,32 @@ $_SESSION;
 					</div>
 				</div>
 
-            <!-- Filtering -->
+           <!-- Filtering -->
 			<div id="features-wrapper">
 				<header id="header" class="container">
 					<nav id="nav">
                     <form>
 						<ul>
                        <li>
-						    <select name="Country" style=" font-weight: bold">
+						    <select name="Continent" style=" font-weight: bold">
 								<option value="" disabled="" selected="">Country</option>
-								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
-								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
-								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+								<option value="America">America</option>
+								<option value="Europe">Europe</option>
+								<option value="Asia">Asia</option>
+								<option value="Africa">Africa</option>
+								<option value="Australia">Australia</option>
 							</select>
 						</li>
                         <li>
 							<select name="Theme" style=" font-weight: bold" >
 								<option value="" disabled="" selected="">Theme</option>
-								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
-								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
-								<option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+								<option value="Floral">Floral</option>
+								<option value="Nature">Nature</option>
+								<option value="Animals">Animals</option>
+								<option value="Astrology">Astrology</option>
+								<option value="Food/Drinks">Food/Drinks</option>
+								<option value="Sport">Sport</option>
+								<option value="Flags">Flags</option>
 							</select>
 						</li>
                         <li>
@@ -140,6 +147,7 @@ $_SESSION;
                         <li>
 							<select name="From Year" style=" font-weight: bold">
 								<option value="" disabled="" selected="">From Year</option>
+								<option value="Older">Older</option>
 								<option value="1800">1800</option>
 								<option value="1900">1900</option>
 								<option value="2000">2000</option>
@@ -147,62 +155,90 @@ $_SESSION;
 						</li>
 						<li><input type="submit" name="submit" value="Apply" style="font-weight: bold"></li>
 						</ul>
+                        <?php
+          $filters = "";
+          if(isset($_POST['submit'])){
+              if(!empty($_POST['Continent'])) {
+                  $continent = $_POST['Continent'];
+                  $filters .= "Continent= '" . $continent . "' and ";
+              }
+              if(!empty($_POST['Theme'])) {
+                  $theme = $_POST['Theme'];
+                  $filters .= "Theme like '%" . $theme . "%' and ";
+              }
+              if(!empty($_POST['Color'])) {
+                  $color = $_POST['Color'];
+                  $filters .= "color='" . $color . "' and ";
+              }
+              if(!empty($_POST['From Year'])) {
+                  $frmyear = $_POST['From Year'];
+                  $filters .= "From Year '%" . $frmyear . "%' and ";
+              }
+
+              $surplus = "and ";
+              if(ends_with($filters, $surplus)){
+                  $filters = substr($filters, 0, -4);
+              }
+            }
+          ?>
                     </form>
 					</nav>
 				</header>
 			</div>
 			<!-- Features -->
+            <?php
+    if(!isset($_POST['submit'])){ ?>
 			<div id="features-wrapper">
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-12-medium">
+                        <?php
+            while(($continent = mysqli_fetch_array($q1)) &&
+                   ($theme = mysqli_fetch_array($q2)) &&
+                  ($color = mysqli_fetch_array($q3)) &&
+                  ($frmyear = mysqli_fetch_array($q4))){
+                    box($continent[0], $theme[0]);
+            }
+            ?>
+                        </div>
+                    </div>
+                 </div>
+            </div>
 
-							<!-- Box -->
-								<section class="box feature">
-									<a href="product_page.php?id=0" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>Name</h2>
-											<p>Seller</p>
-										</header>
-										<p>Description</p>
-									</div>
-								</section>
-
-						</div>
+            <?php } 
+    else if(isset($_POST['submit'])){ ?>
+    			<div id="features-wrapper">
+				<div class="container">
+					<div class="row">
 						<div class="col-4 col-12-medium">
-
-							<!-- Box -->
-								<section class="box feature">
-									<a href="product_page.php?id=1" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>Name</h2>
-											<p>Seller</p>
-										</header>
-										<p>Description</p>
-									</div>
-								</section>
-
-						</div>
-						<div class="col-4 col-12-medium">
-
-							<!-- Box -->
-								<section class="box feature">
-									<a href="product_page.php?id=2" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>Name</h2>
-											<p>Seller</p>
-										</header>
-										<p>Description</p>
-									</div>
-								</section>
-
-						</div>
-					</div>
-				</div>
-			</div>
+                        <?php
+            $q1f = mysqli_query($con, "select continent ".$filters);
+            $q2f = mysqli_query($con, "select theme ".$filters);
+            $q3f = mysqli_query($con, "select color".$filters);
+            $q4f = mysqli_query($con, "select from year ".$filters);
+            $i=0;
+            while(($continent = mysqli_fetch_array($q1f)) && 
+                  ($theme = mysqli_fetch_array($q2f)) && 
+                  ($color = mysqli_fetch_array($q3f)) && 
+                  ($frmyear = mysqli_fetch_array($q4f))){
+                    $i++;
+                    box($continent[0], $theme[0]);
+            }
+            if($i==0){
+                echo '<h3>No stamps here to suit your current preference! Look for other stamps from our selection!</h3>';
+                while(($continent = mysqli_fetch_array($q1)) &&
+                      ($theme = mysqli_fetch_array($q2)) &&
+                      ($color = mysqli_fetch_array($q3)) &&
+                      ($frmyear = mysqli_fetch_array($q4))){
+                    column($continent[0], $theme[0]);
+                }
+            }
+            ?>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <?php } ?>
 
 
        <!-- Footer -->
