@@ -17,7 +17,7 @@ $_SESSION;
 		<title>MyStamp</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" href="images/2022-04-16 17_39_42-Canva.jpg" type="image/gif">
+		<link rel="icon" href="images/2022-04-16_17_39_42-Canva.jpg" type="image/gif">
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload homepage">
@@ -264,6 +264,7 @@ $_SESSION;
                         </div>
                     </footer>
         </div>
+</div>
         
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
@@ -271,5 +272,6 @@ $_SESSION;
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
 	</body>
 </html>

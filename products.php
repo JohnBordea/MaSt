@@ -17,7 +17,7 @@ $_SESSION;
 		<title>MyStamp: Products</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	    <link rel="icon" href="images/2022-04-16 17_39_42-Canva.jpg" type="image/gif">
+	    <link rel="icon" href="images/2022-04-16_17_39_42-Canva.jpg" type="image/gif">
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/products.css" />
 	</head>
@@ -269,6 +269,7 @@ $_SESSION;
                                     <li><a href="#">Felis varius pellentesque potenti</a></li>
                                     <li><a href="#">Nullam scelerisque blandit leo</a></li>
                                     </ul>
+                                    </section>1
                             </div>
                             <div class="col-3 col-6-medium col-12-small">
 
@@ -318,6 +319,6 @@ $_SESSION;
 
 		<!-- Scripts -->
 
-
+</div>
 	</body>
 </html>

@@ -17,7 +17,7 @@ $_SESSION;
 		<title>About Us</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	    <link rel="icon" href="images/2022-04-16 17_39_42-Canva.jpg" type="image/gif">
+	    <link rel="icon" href="images/2022-04-16_17_39_42-Canva.jpg" type="image/gif">
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload left-sidebar">
@@ -270,7 +270,7 @@ $_SESSION;
                         </div>
                     </footer>
                 </div>
-
+</div>
 
 		<!-- Scripts -->
 

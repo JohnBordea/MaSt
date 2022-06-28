@@ -73,7 +73,7 @@ session_start();
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div><br>
 
 			<input id="text" type="text" placeholder="username" name="username"><br>
-			<input id="text" type="password" placeholder="Password" name="password"><br>
+			<input id="text1" type="password" placeholder="Password" name="password"><br>
 
 			<input id="button" type="submit" value="Login"><br>
 

@@ -5,10 +5,12 @@ session_start();
   include("connect.php");
   include("functions_login.php");
   include("validate.php");
+  include("functions_prdct.php");
 
   $user_data=check_login($con);
 
 $_SESSION;
+
 
 ?>
 
@@ -48,22 +50,9 @@ $_SESSION;
                                         <a href="#">Account</a>
                                         <ul>
                                             <?php
-                                            
                                             if (isset($user_data['username'])) {
                                             ?>
-
-                                            <?php
-                                            if (isset($status['1'])) {
-                                            ?>
-
-                                            <li><a href="adminpage.php">Admin page</a></li>
-
-                                            <?php
-                                            } 
-                                            ?>
-
                                             <li><a href="profile.php">Account info</a></li>
-
                                             <?php
                                             }
                                             ?>
@@ -129,12 +118,36 @@ $_SESSION;
             </div>-->
            
         </div>
+
+        <div class="wishlist-border "> <span class="wishlist">Create post</span> </div>
         <br>
-        <a href="post_form.php" class="button">Create post</a>
+
+        <form action="function_prdct.php" method="post">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+    </p>
+    <p>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description">
+    </p>
+    <p>
+        <label for="continent">Stamp Origin:</label>
+        <input type="text" name="continent" id="continent">
+    </p>
+    <p>
+        <label for="theme">Stamp Theme:</label>
+        <input type="text" name="theme" id="theme">
+    </p>
+    <p>
+        <label for="color">Color Palette:</label>
+        <input type="text" name="color" id="color">
+    </p>
+    <input type="submit" value="Submit">
+</form>
         <br>
-        <br>
-        <div class="recent-border "> <span class="recent-orders">Recent posts</span> </div>
-        <!-- <div class="wishlist-border "> <span class="wishlist">Wishlist</span> </div> -->
+        
+        
        
     </div>
 </div>

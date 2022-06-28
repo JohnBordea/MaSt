@@ -48,25 +48,23 @@ $_SESSION;
                                         <a href="#">Account</a>
                                         <ul>
                                             <?php
-                                            
                                             if (isset($user_data['username'])) {
+                                            if ($user_data['username'] == 'admin' or 'admin2') {
                                             ?>
-
-                                            <?php
-                                            if (isset($status['1'])) {
-                                            ?>
-
                                             <li><a href="adminpage.php">Admin page</a></li>
-
-                                            <?php
-                                            } 
-                                            ?>
-
                                             <li><a href="profile.php">Account info</a></li>
 
                                             <?php
-                                            }
+                                            } else {
                                             ?>
+
+                                            <li><a href="profile.php">Account info</a></li>
+                                            <li><a href="post_form.php">Post a stamp</a></li>
+
+                                            <?php
+                                            }}
+                                            ?>
+
                                             
                                             <?php
                                             if (!isset($user_data['username'])) {
@@ -116,7 +114,7 @@ $_SESSION;
 <div class="">
 <div class="container1" >
     <div class="card1">
-        <div class="top-container1"> <img src="images/1.png" alt="profile image" class="img-fluid profile-image" width="70">
+        <div class="top-container1"> <img src="images/admin.png" alt="profile image" class="img-fluid profile-image" width="130">
             <div class="ml-3">
                 <h5 class="name">&nbsp; &nbsp;<?php echo $user_data['username'];?></h5>
                 <p class="mail">&nbsp; &nbsp;<?php echo $user_data['email'];?></p>
@@ -130,10 +128,40 @@ $_SESSION;
            
         </div>
         <br>
-        <a href="post_form.php" class="button">Create post</a>
+        <div>
+            <form action="function_exportcsv.php" method="post" name="upload_excel"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <div >
+                            <input type="submit" name="Export_usr" class="button" value="export user CSV"/>
+                    </div>
+                </div>                    
+            </form>           
+        </div>
+
         <br>
+
+        <div>
+            <form action="function_exportcsv.php" method="post" name="upload_excel"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <div >
+                            <input type="submit" name="Export_usr" class="button" value="export products CSV"/>
+                    </div>
+                </div>                    
+            </form>           
+        </div>
+        
         <br>
-        <div class="recent-border "> <span class="recent-orders">Recent posts</span> </div>
+
+        <div>
+            <form action="function_exportcsv.php" method="post" name="upload_excel"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <div >
+                            <input type="submit" name="Export_usr" class="button" value="export products' sfeedback CSV"/>
+                    </div>
+                </div>                    
+            </form>           
+         </div>
+
         <!-- <div class="wishlist-border "> <span class="wishlist">Wishlist</span> </div> -->
        
     </div>
