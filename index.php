@@ -4,6 +4,7 @@ session_start();
 
   include("connect.php");
   include("functions_login.php");
+  include("functions_products.php");
 
   $user_data=check_login($con);
 
@@ -116,58 +117,24 @@ $_SESSION;
 				<div class="container">
 					<h2>Recently added Stamps</h2>
 
-					<div id="features-wrapper">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
+
 	
-									<!-- Box -->
-									<section class="box feature">
-										<a href="product_page.php?id=0" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Name</h2>
-												<p>Seller</p>
-											</header>
-											<p>Description</p>
-										</div>
-									</section>
-	
-								</div>
-								<div class="col-4 col-12-medium">
-	
-									<!-- Box -->
-									<section class="box feature">
-										<a href="product_page.php?id=1" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Name</h2>
-												<p>Seller</p>
-											</header>
-											<p>Description</p>
-										</div>
-									</section>
-	
-								</div>
-								<div class="col-4 col-12-medium">
-	
-									<!-- Box -->
-									<section class="box feature">
-										<a href="product_page.php?id=2" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Name</h2>
-												<p>Seller</p>
-											</header>
-											<p>Description</p>
-										</div>
-									</section>
-	
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div id="features-wrapper">
+				<div class="container">
+					<div class="row">
+                        <?php
+            while(($continent = mysqli_fetch_array($q1r)) &&
+                   ($theme = mysqli_fetch_array($q2r)) &&
+                  ($color = mysqli_fetch_array($q3r)) &&
+                  ($name = mysqli_fetch_array($q5r)) &&
+                  ($description = mysqli_fetch_array($q6r))
+                  ){
+                    box($name[0], $description[0],$continent[0],$theme[0],$color[0]);
+            }
+            ?>
+                    </div>
+                 </div>
+            </div>
 
 			<!-- Main -->
 				<div class="container">

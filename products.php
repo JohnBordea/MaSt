@@ -116,7 +116,7 @@ $_SESSION;
                     <form>
 						<ul>
                        <li>
-						    <select name="Continent" style=" font-weight: bold">
+						    <select name="continent" style=" font-weight: bold">
 								<option value="" disabled="" selected="">Continent</option>
 								<option value="America">America</option>
 								<option value="Europe">Europe</option>
@@ -126,7 +126,7 @@ $_SESSION;
 							</select>
 						</li>
                         <li>
-							<select name="Theme" style=" font-weight: bold" >
+							<select name="theme" style=" font-weight: bold" >
 								<option value="" disabled="" selected="">Theme</option>
 								<option value="Floral">Floral</option>
 								<option value="Nature">Nature</option>
@@ -135,49 +135,32 @@ $_SESSION;
 								<option value="Food/Drinks">Food/Drinks</option>
 								<option value="Sport">Sport</option>
 								<option value="Flags">Flags</option>
+                                <option value="Music">Music</option>
 							</select>
 						</li>
                         <li>
-							<select name="Color" style=" font-weight: bold">
+							<select name="color" style=" font-weight: bold">
 								<option value="" disabled="" selected="">Color</option>
 								<option value="Monochrome">Monochrome</option>
 								<option value="Multicolor">Multicolor</option>
 							</select>
 						</li>
-                        <li>
-							<select name="From Year" style=" font-weight: bold">
-								<option value="" disabled="" selected="">From Year</option>
-								<option value="Older">Older</option>
-								<option value="1800">1800</option>
-								<option value="1900">1900</option>
-								<option value="2000">2000</option>
-							</select>
-						</li>
 						<li><input type="submit" name="submit" value="Apply" style="font-weight: bold"></li>
 						</ul>
                         <?php
-          $filters = "";
+          $filters="";
           if(isset($_POST['submit'])){
-              if(!empty($_POST['Continent'])) {
-                  $continent = $_POST['Continent'];
-                  $filters .= "Continent= '" . $continent . "' and ";
+              if(!empty($_POST['continent'])) {
+                  $continent = $_POST['continent'];
+                  $filters .= "continent= '" . $continent . "' and " ;
               }
-              if(!empty($_POST['Theme'])) {
-                  $theme = $_POST['Theme'];
-                  $filters .= "Theme like '%" . $theme . "%' and ";
+              if(!empty($_POST['theme'])) {
+                  $theme = $_POST['theme'];
+                  $filters .= "theme= '" . $theme . "' and ";
               }
-              if(!empty($_POST['Color'])) {
-                  $color = $_POST['Color'];
-                  $filters .= "color='" . $color . "' and ";
-              }
-              if(!empty($_POST['From Year'])) {
-                  $frmyear = $_POST['From Year'];
-                  $filters .= "From Year '%" . $frmyear . "%' and ";
-              }
-
-              $surplus = "and ";
-              if(ends_with($filters, $surplus)){
-                  $filters = substr($filters, 0, -4);
+              if(!empty($_POST['color'])) {
+                  $color = $_POST['color'];
+                  $filters .= "color='" . $color . "'";
               }
             }
           ?>
@@ -195,8 +178,10 @@ $_SESSION;
             while(($continent = mysqli_fetch_array($q1)) &&
                    ($theme = mysqli_fetch_array($q2)) &&
                   ($color = mysqli_fetch_array($q3)) &&
-                  ($frmyear = mysqli_fetch_array($q4))){
-                    box($continent[0], $theme[0]);
+                  ($name = mysqli_fetch_array($q5)) &&
+                  ($description = mysqli_fetch_array($q6))
+                  ){
+                    box($name[0], $description[0],$continent[0],$theme[0],$color[0]);
             }
             ?>
                     </div>
@@ -209,25 +194,27 @@ $_SESSION;
 				<div class="container">
 					<div class="row">
                         <?php
-            $q1f = mysqli_query($con, "select continent from products where".$filters);
+            $q1f = mysqli_query($con, "select continent from products where ".$filters);
             $q2f = mysqli_query($con, "select theme from products where ".$filters);
             $q3f = mysqli_query($con, "select color from products where ".$filters);
-            $q4f = mysqli_query($con, "select year from products where ".$filters);
             $i=0;
-            while(($continent = mysqli_fetch_array($q1f)) && 
-                  ($theme = mysqli_fetch_array($q2f)) && 
-                  ($color = mysqli_fetch_array($q3f)) && 
-                  ($frmyear = mysqli_fetch_array($q4f))){
+            while(($continent = mysqli_fetch_array($q1f)) &&
+            ($theme = mysqli_fetch_array($q2f)) &&
+           ($color = mysqli_fetch_array($q3f)) &&
+           ($name = mysqli_fetch_array($q5)) &&
+           ($description = mysqli_fetch_array($q6)))
+                  {
                     $i++;
-                    box($continent[0], $theme[0]);
+                    box($name[$i], $description[$i],$continent[$i],$theme[$i],$color[$i]);
             }
             if($i==0){
                 echo '<h3>No stamps here to suit your current preference! Look for other stamps from our selection!</h3>';
                 while(($continent = mysqli_fetch_array($q1)) &&
                       ($theme = mysqli_fetch_array($q2)) &&
                       ($color = mysqli_fetch_array($q3)) &&
-                      ($frmyear = mysqli_fetch_array($q4))){
-                    column($continent[0], $theme[0]);
+                      ($name = mysqli_fetch_array($q5)) &&
+                  ($description = mysqli_fetch_array($q6))){
+                        box($name[0], $description[0],$continent[0],$theme[0],$color[0]);
                 }
             }
             ?>
